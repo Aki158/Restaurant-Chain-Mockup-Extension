@@ -1,0 +1,2 @@
+# Restaurant-Chain-Mockup-Extension
+RecursionCSのBackendProject4_Restaurant-Chain-Mockup-Extensionのリポジトリーになります。
