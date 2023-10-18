@@ -1,0 +1,86 @@
+{
+    "restaurantChains1": {
+        "restaurantChain": "Krajcik Ltd",
+        "numberOfLocation": 3,
+        "restaurantLocations": {
+            "name": {
+                "name": "Shawn Schuppe"
+            },
+            "detail": {
+                "name": "Shawn Schuppe",
+                "address": "845 Abigayle Points Suite 690\nEffertzland, AZ 44586-0249",
+                "zipCode": "144-0822"
+            },
+            "employees": {
+                "id": 319,
+                "jobTitle": "Executive Secretary",
+                "name": "Moriah Lindgren",
+                "startDate": "1983-04-04",
+                "salary": 3344.378
+            }
+        }
+    },
+    "restaurantChains2": {
+        "restaurantChain": "Maggio LLC",
+        "numberOfLocation": 3,
+        "restaurantLocations": {
+            "name": {
+                "name": "Garret Becker"
+            },
+            "detail": {
+                "name": "Garret Becker",
+                "address": "33007 Stoltenberg Grove Suite 788\nHodkiewiczstad, CT 24692-8032",
+                "zipCode": "137-5720"
+            },
+            "employees": {
+                "id": 8162792,
+                "jobTitle": "Mathematical Technician",
+                "name": "Carleton O'Conner",
+                "startDate": "1985-01-14",
+                "salary": 3579.3057
+            }
+        }
+    },
+    "restaurantChains3": {
+        "restaurantChain": "Green and Sons",
+        "numberOfLocation": 3,
+        "restaurantLocations": {
+            "name": {
+                "name": "Kris Emard PhD"
+            },
+            "detail": {
+                "name": "Kris Emard PhD",
+                "address": "4628 Steuber Via Suite 540\nEastonhaven, ID 22919",
+                "zipCode": "206-0333"
+            },
+            "employees": {
+                "id": 921377,
+                "jobTitle": "Maintenance Worker",
+                "name": "Burley Yundt",
+                "startDate": "2023-03-22",
+                "salary": 3611.1008
+            }
+        }
+    },
+    "restaurantChains4": {
+        "restaurantChain": "Yundt-O'Kon",
+        "numberOfLocation": 3,
+        "restaurantLocations": {
+            "name": {
+                "name": "Katarina Hermiston"
+            },
+            "detail": {
+                "name": "Katarina Hermiston",
+                "address": "2454 Conn Ridges\nMorrismouth, CT 59074",
+                "zipCode": "222-3108"
+            },
+            "employees": {
+                "id": 7,
+                "jobTitle": "Crushing Grinding Machine Operator",
+                "name": "Joanie Boyer",
+                "startDate": "1983-09-26",
+                "salary": 3026.3561
+            }
+        }
+    }
+}

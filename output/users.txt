@@ -1,0 +1,70 @@
+
+Restaurant Chain : Bayer, Lemke and Lindgren
+(Number of location : 3)
+
+	[Restaurant Chain Information]
+
+	■Miss Hulda Rowe DVM
+	・Company Name: Miss Hulda Rowe DVM, Address: 830 Satterfield Avenue
+North Mauricio, ME 76891-0145, Zip Code: 136-0263
+
+	・Employees:
+		- ID: 2, Job Title: Special Forces Officer, Name: Wellington Stiedemann, Start Date: 1972-12-23,Salary: $3846.528700
+		- ID: 77058, Job Title: Plastic Molding Machine Operator, Name: Jean Sporer, Start Date: 2011-01-28,Salary: $3398.332100
+		- ID: 99078890, Job Title: Engineering Technician, Name: Wilfred Keebler, Start Date: 2016-06-13,Salary: $3443.814900
+		- ID: 5, Job Title: Aircraft Body Repairer, Name: Francis Doyle, Start Date: 2011-04-24,Salary: $3266.255200
+
+	■Marvin Herzog III
+	・Company Name: Marvin Herzog III, Address: 7271 Modesto Shores Suite 714
+East Kellybury, FL 07727-4123, Zip Code: 135-2647
+
+	・Employees:
+		- ID: 2, Job Title: Podiatrist, Name: Tod Donnelly, Start Date: 1982-03-01,Salary: $3458.215200
+		- ID: 534, Job Title: User Experience Manager, Name: Jed Hodkiewicz, Start Date: 2015-08-23,Salary: $3287.221000
+		- ID: 166748, Job Title: Chemistry Teacher, Name: Annabelle Herman, Start Date: 2020-04-22,Salary: $3688.150300
+		- ID: 5, Job Title: Dot Etcher, Name: Kariane Bednar, Start Date: 2010-03-30,Salary: $3421.293300
+
+	■Dr. Ryder Effertz
+	・Company Name: Dr. Ryder Effertz, Address: 9027 Marcelle Brooks Suite 831
+Wainoville, DE 49858-9587, Zip Code: 212-9620
+
+	・Employees:
+		- ID: 647, Job Title: Hairdresser OR Cosmetologist, Name: Chet Marquardt, Start Date: 1982-11-02,Salary: $3304.069200
+		- ID: 7588, Job Title: Microbiologist, Name: Patsy Harvey, Start Date: 1986-10-05,Salary: $3071.642600
+		- ID: 67550083, Job Title: Social Service Specialists, Name: Maynard Padberg, Start Date: 1995-09-09,Salary: $3041.532000
+		- ID: 266, Job Title: Pharmaceutical Sales Representative, Name: Robin Wehner, Start Date: 1984-05-13,Salary: $3220.332700
+
+Restaurant Chain : Hartmann Inc
+(Number of location : 3)
+
+	[Restaurant Chain Information]
+
+	■Prof. Glennie Olson II
+	・Company Name: Prof. Glennie Olson II, Address: 12973 Kris Highway Apt. 444
+South Tellyfort, IL 92281-9209, Zip Code: 201-9653
+
+	・Employees:
+		- ID: 69, Job Title: Chef, Name: Alta Sanford, Start Date: 2009-01-28,Salary: $3836.790900
+		- ID: 2949435, Job Title: Ceiling Tile Installer, Name: Dagmar Lesch, Start Date: 1982-11-22,Salary: $3695.345100
+		- ID: 647764930, Job Title: Agricultural Inspector, Name: Keeley Parker, Start Date: 1977-05-27,Salary: $3141.903700
+		- ID: 9, Job Title: Protective Service Worker, Name: Zelma Keebler, Start Date: 2004-07-18,Salary: $3394.342500
+
+	■Enid Reynolds
+	・Company Name: Enid Reynolds, Address: 2576 Brown Turnpike
+Weissnatborough, HI 91363, Zip Code: 127-9305
+
+	・Employees:
+		- ID: 343577, Job Title: Amusement Attendant, Name: Elenor Braun, Start Date: 2020-07-03,Salary: $3461.758000
+		- ID: 40, Job Title: Drafter, Name: Nikolas Bernier, Start Date: 2018-10-16,Salary: $3242.957500
+		- ID: 2646178, Job Title: Criminal Investigator, Name: Jacquelyn Ortiz, Start Date: 2004-10-13,Salary: $3124.580600
+		- ID: 41784269, Job Title: Government, Name: Shanny Ziemann, Start Date: 1983-02-02,Salary: $3656.306600
+
+	■Grace Gerhold
+	・Company Name: Grace Gerhold, Address: 967 Cristobal Gardens
+Port Gersonview, OR 86812, Zip Code: 195-4211
+
+	・Employees:
+		- ID: 62215, Job Title: Environmental Scientist, Name: Brayan Cole, Start Date: 2018-07-26,Salary: $3415.877300
+		- ID: 25737, Job Title: Medical Transcriptionist, Name: Maximillian Wisoky, Start Date: 1992-05-18,Salary: $3931.199800
+		- ID: 3, Job Title: Woodworker, Name: Ruben Eichmann, Start Date: 2020-08-20,Salary: $3200.180300
+		- ID: 67493, Job Title: Construction, Name: Anna Pfannerstill, Start Date: 2019-01-06,Salary: $3702.149100
