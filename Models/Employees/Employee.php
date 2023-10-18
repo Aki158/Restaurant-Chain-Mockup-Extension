@@ -48,17 +48,18 @@ class Employee extends User implements FileConvertible{
 
     public function toString(): string {
         return sprintf(
-            "JobTitle: %s\nSalary: %f\nStart Date: %s\nAwards: %s\n",
+            "\t\t- ID: %d, Job Title: %s, Name: %s, Start Date: %s,Salary: $%f\n",
+            parent::getID(),
             $this->jobTitle,
-            $this->salary,
+            parent::getUserName(),
             $this->startDate,
-            $this->awardsStr
+            $this->salary
         );
     }
 
     public function toHTML(): string {
         return sprintf(
-            "<p>ID: %d, Job Title: %s, Name: %s, Start Date: %s,Salary: %f</p>",
+            "<p>ID: %d, Job Title: %s, Name: %s, Start Date: %s,Salary: $%f</p>",
             parent::getID(),
             $this->jobTitle,
             parent::getUserName(),
@@ -68,17 +69,17 @@ class Employee extends User implements FileConvertible{
     }
 
     public function toMarkdown(): string {
-        return " - Job Title: {$this->jobTitle}
-                 - Salary: {$this->salary}
-                 - Start Date: {$this->startDate}
-                 - Awards: {$this->awardsStr}";
+        return "- ID: ".parent::getID().", Job Title: ".$this->jobTitle.", Name: ".parent::getUserName().", Start Date: ".$this->startDate.",  Salary: $".$this->salary."\n";
     }
   
     public function toArray(): array {
-        return  ['jobTitle' => $this->jobTitle,
-                 'salary' => $this->salary,
-                 'startDate' => $this->startDate,
-                 'awards' => $this->awards];
+        return  [
+            "id" => parent::getID(),
+            "jobTitle" => $this->jobTitle,
+            "name" => parent::getUserName(),
+            "startDate" => $this->startDate,
+            "salary" => $this->salary
+        ];
     }
 }
 ?>

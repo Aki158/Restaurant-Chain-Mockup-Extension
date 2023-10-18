@@ -33,53 +33,48 @@ class RestaurantLocation implements FileConvertible{
         return $this->employees;
     }
 
+    public function toNameString(): string {
+        return sprintf("\n\t■%s\n", $this->name);
+    }
+
+    public function toNameHTML(): string {
+        return sprintf("<p>%s</p>", $this->name);
+    }
+
+    public function toNameMarkdown(): string {
+        return sprintf("### %s\n", $this->name);
+    }
+
+    public function toNameArray(): array {
+        return ["name" => $this->name];
+    }    
+
     public function toString(): string {
         return sprintf(
-            "Name: %s\nAddress: %s\nCity: %s\nState: %s\nzipCode: %s\nisOpen: %d\nHasDriveThru: %d\n",
+            "\t・Company Name: %s, Address: %s, Zip Code: %s\n\n",
             $this->name,
             $this->address,
-            $this->city,
-            $this->state,
-            $this->zipCode,
-            $this->isOpen,
-            $this->hasDriveThru
+            $this->zipCode
         );
     }
 
     public function toHTML(): string {
         return sprintf(
-            '<p>Company Name: %s, Address: %s, Zip Code: %s</p>',
+            "<p>Company Name: %s, Address: %s, Zip Code: %s</p>",
             $this->name,
             $this->address,
             $this->zipCode,
         );
     }
 
-    public function toNameHTML(): string {
-        return sprintf(
-            "<p>%s</p>",
-            $this->name
-        );
+    public function toMarkdown(): string {
+        return "- Company Name: ".$this->name.", Address: ".$this->address.", Zip Code: ".$this->zipCode."\n";
     }
 
-    public function toMarkdown(): string {
-        return " - Name: {$this->name}
-                 - Address: {$this->address}
-                 - City: {$this->city}
-                 - State: {$this->state}
-                 - Zip Code: {$this->zipCode}
-                 - Is Open: {$this->isOpen}
-                 - Has Drive Thru: {$this->hasDriveThru}";
-    }
-  
     public function toArray(): array {
-        return  ['name' => $this->name,
-                 'address' => $this->address,
-                 'city' => $this->city,
-                 'state' => $this->state,
-                 'zipCode' => $this->zipCode,
-                 'isOpen' => $this->isOpen,
-                 'hasDriveThru' => $this->hasDriveThru];
+        return  ["name" => $this->name,
+                 "address" => $this->address,
+                 "zipCode" => $this->zipCode];
     }
 }
 ?>

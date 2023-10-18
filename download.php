@@ -1,26 +1,26 @@
 <?php
 // コードベースのファイルのオートロード
-spl_autoload_extensions('.php'); 
+spl_autoload_extensions(".php"); 
 spl_autoload_register();
 
 // composerの依存関係のオートロード
-require_once 'vendor/autoload.php';
+require_once "vendor/autoload.php";
 
 // クエリ文字列からパラメータを取得
-$min = $_GET['min'] ?? 2;
-$max = $_GET['max'] ?? 5;
+$min = $_GET["min"] ?? 2;
+$max = $_GET["max"] ?? 5;
 
 // パラメータが整数であることを確認
 $min = (int)$min;
 $max = (int)$max;
 
 // POSTリクエストからパラメータを取得
-$countEmployee = $_POST['countEmployee'] ?? 5;
-$salary = $_POST['salary'] ?? '1000';
-$countRestaurantLocation = $_POST['countRestaurantLocation'] ?? 5;
-$postalCodeMin = $_POST['postalCodeMin'] ?? '000-0000';
-$postalCodeMax = $_POST['postalCodeMax'] ?? '999-9999';
-$format = $_POST['format'] ?? 'html';
+$countEmployee = $_POST["countEmployee"] ?? 5;
+$salary = $_POST["salary"] ?? "1000";
+$countRestaurantLocation = $_POST["countRestaurantLocation"] ?? 5;
+$postalCodeMin = $_POST["postalCodeMin"] ?? "000-0000";
+$postalCodeMax = $_POST["postalCodeMax"] ?? "999-9999";
+$format = $_POST["format"] ?? "html";
 
 // パラメータが正しい形式であることを確認
 $countEmployee = (int)$countEmployee;
@@ -35,7 +35,7 @@ if (
     is_null($postalCodeMax) || 
     is_null($format)
     ) {
-    exit('Missing parameters.');
+    exit("Missing parameters.");
 }
 
 if (!is_numeric($countEmployee) || $countEmployee < 1 || $countEmployee > 100) {
@@ -66,24 +66,23 @@ if (!is_numeric($countRestaurantLocation) || $countRestaurantLocation < 1 || $co
     exit('"Number of RestaurantLocations:" is invalid count. Must be a number between 1 and 10.');
 }
 
-$postalCodeMinNum = (int)str_replace('-', '', $postalCodeMin);
-$postalCodeMaxNum = (int)str_replace('-', '', $postalCodeMax);
+$postalCodeMinNum = (int)str_replace("-", "", $postalCodeMin);
+$postalCodeMaxNum = (int)str_replace("-", "", $postalCodeMax);
 
-if (!is_numeric($postalCodeMinNum) || strlen($postalCodeMin) !== 8 || strpos($postalCodeMin,'-') !== 3) {
+if (!is_numeric($postalCodeMinNum) || strlen($postalCodeMin) !== 8 || strpos($postalCodeMin,"-") !== 3) {
     exit('"Minimum postal code:" is invalid postal code. Follow the placeholders.');
 }
 
-if (!is_numeric($postalCodeMaxNum) || strlen($postalCodeMax) !== 8 || strpos($postalCodeMax,'-') !== 3) {
+if (!is_numeric($postalCodeMaxNum) || strlen($postalCodeMax) !== 8 || strpos($postalCodeMax,"-") !== 3) {
     exit('"Maximum postal code:" is invalid postal code. Follow the placeholders.');
 }
 
-$allowedFormats = ['json', 'txt', 'html', 'md'];
+$allowedFormats = ["json", "txt", "html", "md"];
 
 if (!in_array($format, $allowedFormats)) {
-    exit('Invalid format. Must be one of: ' . implode(', ', $allowedFormats));
+    exit("Invalid format. Must be one of: " . implode(", ", $allowedFormats));
 }
 
-// ユーザーを生成
 $restaurantChains = \Helpers\RandomGenerator::restaurantChains(
                                                             $min, 
                                                             $max, 
@@ -95,27 +94,64 @@ $restaurantChains = \Helpers\RandomGenerator::restaurantChains(
                                                             $postalCodeMaxNum
                                                         );
 
-
-// [ToDo]md,json,txtの処理は明日やる！
-if ($format === 'md') {
-    header('Content-Type: text/markdown');
+if ($format === "md") {
+    header("Content-Type: text/markdown");
     header('Content-Disposition: attachment; filename="users.md"');
-    foreach ($users as $user) {
-        echo $user->toMarkdown();
+    
+    foreach ($restaurantChains as $restaurantChain){
+        echo $restaurantChain->toMarkdown();
+        echo sprintf("## Restaurant Chain Information\n");
+        foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation){
+            echo $restaurantLocation->toNameMarkdown();
+            echo $restaurantLocation->toMarkdown();
+            echo sprintf("#### Employees:\n");
+            foreach ($restaurantLocation->getEmployees() as $employee){
+                echo $employee->toMarkdown();
+            }
+        }
     }
-} elseif ($format === 'json') {
-    header('Content-Type: application/json');
+} elseif ($format === "json") {
+    header("Content-Type: application/json");
     header('Content-Disposition: attachment; filename="users.json"');
-    $usersArray = array_map(fn($user) => $user->toArray(), $users);
-    echo json_encode($usersArray);
-} elseif ($format === 'txt') {
-    header('Content-Type: text/plain');
+
+    $output = [];
+    $i = 0;
+    foreach ($restaurantChains as $restaurantChain) {
+        $i++;
+        $output['restaurantChains'.$i] = $restaurantChain->toArray();
+
+        foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation) {
+            
+            $output['restaurantChains'.$i]['restaurantLocations']['name'] = $restaurantLocation->toNameArray();
+
+            $restaurantLocationArray = $restaurantLocation->toArray();
+            $output['restaurantChains'.$i]['restaurantLocations']['detail'] = $restaurantLocationArray;
+
+            $employees = [];
+            foreach ($restaurantLocation->getEmployees() as $employee) {
+                $employees = $employee->toArray();
+            }
+            $output['restaurantChains'.$i]['restaurantLocations']['employees'] = $employees;
+        }
+    }
+    echo json_encode($output, JSON_PRETTY_PRINT);
+} elseif ($format === "txt") {
+    header("Content-Type: text/plain");
     header('Content-Disposition: attachment; filename="users.txt"');
-    foreach ($users as $user) {
-        echo $user->toString();
+    
+    foreach ($restaurantChains as $restaurantChain){
+        echo $restaurantChain->toString();
+        echo "\t[Restaurant Chain Information]\n";
+        foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation){
+            echo $restaurantLocation->toNameString();
+            echo $restaurantLocation->toString();
+            echo "\t・Employees:\n";
+            foreach ($restaurantLocation->getEmployees() as $employee){
+                echo $employee->toString();
+            }
+        }
     }
 } else {
-    // HTMLをデフォルトに
-    header('Content-Type: text/html');
-    include 'toHtml.php';
+    header("Content-Type: text/html");
+    include "toHtml.php";
 }
