@@ -38,41 +38,29 @@ class RestaurantChain extends Company implements FileConvertible{
     }
 
     public function toString(): string {
-        return sprintf(
-            "Chain Id: %d\nRestaurant Locations: %s\nCuisine Type: %s\nNumber Of Location: %d\nParent Company: %s\n",
-            $this->chainId,
-            $this->restaurantLocation,
-            $this->cuisineType,
-            $this->numberOfLocation,
-            $this->parentCompany
+        return sprintf("\nRestaurant Chain : %s\n(Number of location : %d)\n\n",
+            parent::getName(),
+            $this->numberOfLocation
         );
     }
 
     public function toHTML(): string {
-        return sprintf(
-            "<h2>Restaurant Chain : %s</h2>
-            <h2>(Number of location : %d)</h2>
-            ",
-            parent::toHTML(),
+        return sprintf("
+            <h2>Restaurant Chain : %s</h2>
+            <h2>(Number of location : %d)</h2>",
+            parent::getName(),
             $this->numberOfLocation
         );
     }
 
     public function toMarkdown(): string {
-        return " - Chain Id: {$this->chainId}
-                 - Restaurant Location: {$this->restaurantLocation}
-                 - Cuisine Type: {$this->cuisineType}
-                 - Number Of Location: {$this->numberOfLocation}
-                 - Parent Company: {$this->parentCompany}";
+        return "# Restaurant Chain : ".parent::getName()."\n# (Number of location : ".$this->numberOfLocation.")\n";
     }
-  
+
     public function toArray(): array {
         return [
-            'chainId' => $this->chainId,
-            'restaurantLocation' => $this->restaurantLocation,
-            'cuisineType' => $this->cuisineType,
-            'numberOfLocation' => $this->numberOfLocation,
-            'parentCompany' => $this->parentCompany
+            "restaurantChain" => parent::getName(),
+            "numberOfLocation" => $this->numberOfLocation
         ];
     }
 }

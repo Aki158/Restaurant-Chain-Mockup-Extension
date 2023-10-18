@@ -31,8 +31,8 @@ class User implements FileConvertible{
         $this->password = $password;
         $this->phoneNumber = $phoneNumber;
         $this->address = $address;
-        $this->birthDate = $birthDate->format('Y-m-d');
-        $this->membershipExpirationDate = $membershipExpirationDate->format('Y-m-d');
+        $this->birthDate = $birthDate->format("Y-m-d");
+        $this->membershipExpirationDate = $membershipExpirationDate->format("Y-m-d");
         $this->role = $role;
         $this->hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     }
@@ -103,8 +103,7 @@ class User implements FileConvertible{
     }    
     
     public function toMarkdown(): string {
-        return "## User: {$this->firstName} {$this->lastName}
-                 - Email: {$this->email}
+        return "## User: {$this->firstName} {$this->lastName}\n- Email: {$this->email}\n
                  - Phone Number: {$this->phoneNumber}
                  - Address: {$this->address}
                  - Birth Date: {$this->birthDate}
@@ -113,15 +112,15 @@ class User implements FileConvertible{
 
     public function toArray(): array {
         return [
-            'id' => $this->id,
-            'firstName' => $this->firstName,
-            'lastName' => $this->lastName,
-            'email' => $this->email,
-            'password' => $this->password,
-            'phoneNumber' => $this->phoneNumber,
-            'address' => $this->address,
-            'birthDate' => $this->birthDate,
-            'role' => $this->role
+            "id" => $this->id,
+            "firstName" => $this->firstName,
+            "lastName" => $this->lastName,
+            "email" => $this->email,
+            "password" => $this->password,
+            "phoneNumber" => $this->phoneNumber,
+            "address" => $this->address,
+            "birthDate" => $this->birthDate,
+            "role" => $this->role
         ];
     }
 }
