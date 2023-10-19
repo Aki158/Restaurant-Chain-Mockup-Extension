@@ -28,7 +28,7 @@
     <?php $index = 0 ?>
     <?php foreach ($restaurantChains as $restaurantChain): ?>
         <div class="text-center my-3">
-            <?php echo $restaurantChain->toHTML(); ?>
+            <?php print($restaurantChain->toHTML()); ?>
         </div>
         
         <div class="container bg-info p-3">
@@ -38,23 +38,23 @@
         <div class="container custom-container">
             <?php foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation): ?>
                 <?php $index++ ?>
-                <div class="accordion accordion-flush" id="accordionFlush<?php echo $index; ?>">
+                <div class="accordion accordion-flush" id="accordionFlush<?php print($index); ?>">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne<?php echo $index; ?>" aria-expanded="false" aria-controls="flush-collapseOne<?php echo $index; ?>">
-                                <?php echo $restaurantLocation->toNameHTML(); ?>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne<?php print($index); ?>" aria-expanded="false" aria-controls="flush-collapseOne<?php print($index); ?>">
+                                <?php print($restaurantLocation->toNameHTML()); ?>
                             </button>
                         </h2>
-                        <div id="flush-collapseOne<?php echo $index; ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"> 
+                        <div id="flush-collapseOne<?php print($index); ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlush"> 
                             <div class="accordion-body">
-                                <?php echo $restaurantLocation->toHTML(); ?>
+                                <?php print($restaurantLocation->toHTML()); ?>
                                 <div class="custom-border-bottom"></div>
                                 <h5>Employees:</h5>
                                 <?php foreach ($restaurantLocation->getEmployees() as $employee): ?>
                                     <div class="container">
                                         <table class="table custom-border">
                                             <tr>
-                                                <td><?php echo $employee->toHTML(); ?></td>
+                                                <td><?php print($employee->toHTML()); ?></td>
                                             </tr>     
                                         </table>
                                     </div>
