@@ -98,60 +98,20 @@ if ($format === "md") {
     header("Content-Type: text/markdown");
     header('Content-Disposition: attachment; filename="users.md"');
     
-    foreach ($restaurantChains as $restaurantChain){
-        echo $restaurantChain->toMarkdown();
-        echo sprintf("## Restaurant Chain Information\n");
-        foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation){
-            echo $restaurantLocation->toNameMarkdown();
-            echo $restaurantLocation->toMarkdown();
-            echo sprintf("#### Employees:\n");
-            foreach ($restaurantLocation->getEmployees() as $employee){
-                echo $employee->toMarkdown();
-            }
-        }
-    }
+    print(\Helpers\RenderHelper::restaurantsToChainsMarkdown($restaurantChains));
 } elseif ($format === "json") {
     header("Content-Type: application/json");
     header('Content-Disposition: attachment; filename="users.json"');
 
-    $output = [];
-    $i = 0;
-    foreach ($restaurantChains as $restaurantChain) {
-        $i++;
-        $output['restaurantChains'.$i] = $restaurantChain->toArray();
-
-        foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation) {
-            
-            $output['restaurantChains'.$i]['restaurantLocations']['name'] = $restaurantLocation->toNameArray();
-
-            $restaurantLocationArray = $restaurantLocation->toArray();
-            $output['restaurantChains'.$i]['restaurantLocations']['detail'] = $restaurantLocationArray;
-
-            $employees = [];
-            foreach ($restaurantLocation->getEmployees() as $employee) {
-                $employees = $employee->toArray();
-            }
-            $output['restaurantChains'.$i]['restaurantLocations']['employees'] = $employees;
-        }
-    }
-    echo json_encode($output, JSON_PRETTY_PRINT);
+    $output = \Helpers\RenderHelper::restaurantsToChainsJson($restaurantChains);
+    print(json_encode($output, JSON_PRETTY_PRINT));
 } elseif ($format === "txt") {
     header("Content-Type: text/plain");
     header('Content-Disposition: attachment; filename="users.txt"');
     
-    foreach ($restaurantChains as $restaurantChain){
-        echo $restaurantChain->toString();
-        echo "\t[Restaurant Chain Information]\n";
-        foreach ($restaurantChain->getRestaurantLocation() as $restaurantLocation){
-            echo $restaurantLocation->toNameString();
-            echo $restaurantLocation->toString();
-            echo "\t・Employees:\n";
-            foreach ($restaurantLocation->getEmployees() as $employee){
-                echo $employee->toString();
-            }
-        }
-    }
+    print(\Helpers\RenderHelper::restaurantsToChainsTxt($restaurantChains));
 } else {
     header("Content-Type: text/html");
+    
     include "toHtml.php";
 }
