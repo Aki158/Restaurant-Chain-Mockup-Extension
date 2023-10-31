@@ -51,4 +51,4 @@ https://github.com/Aki158/Restaurant-Chain-Mockup
 ![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/c5238312-d91b-43cd-9f2e-c5a58ac1db4a)
 
 ## 使用方法
->php -S localhost:8000
+https://restaurant-chain-mockup-extension.aki158-website.blog
