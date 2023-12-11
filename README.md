@@ -12,9 +12,7 @@ https://restaurant-chain-mockup-extension.aki158-website.blog
 ## 📝説明
 このモックアップページは、レストランチェーン企業の一覧が見れるサイトです。
 
-モックアップは、実際のソフトウェア製品の開発前にWebエンジニアやWebデザイナーなどのコンテンツクリエイターが使用し、
-
-サイトのレイアウト、フォント、コンテンツの配置などを確認します。
+モックアップは、実際のソフトウェア製品の開発前にWebエンジニアやWebデザイナーなどのコンテンツクリエイターが使用し、サイトのレイアウト、フォント、コンテンツの配置などを確認します。
 
 デザインのプロトタイピングやコンセプト確認のための重要なツールであり、デザインの品質向上や効率的なプロジェクト遂行に貢献します。
 
@@ -57,14 +55,14 @@ https://restaurant-chain-mockup-extension.aki158-website.blog
 一通りの手順のイメージは[デモ](#デモ)を参考にしてください。
 1. [URL](#URL)にアクセスする
 2. 入力フォームからオプションをカスタマイズして下記のように設定する
-  - Number of Employees: `4`
-  - salary: `$2,000 〜 $2,999`
-  - Number of RestaurantLocations: `3`
-  - Minimum postal code: `123-4567`
-  - Maximum postal code: `234-5678`
-  - Download Format: `HTML`
-3. Generate ボタンをクリックする<br>Download Format: でHTML以外を選択すると、モックアップデータは、ダウンロードされます。
-4. モックアップページを確認する<br>オプションで設定した入力情報をもとに、モックアップページが表示されます。
+    - Number of Employees: `4`
+    - salary: `$2,000 〜 $2,999`
+    - Number of RestaurantLocations: `3`
+    - Minimum postal code: `123-4567`
+    - Maximum postal code: `234-5678`
+    - Download Format: `HTML`
+3. Generate ボタンをクリックする。<br>Download Format: でHTML以外を選択すると、モックアップデータは、ダウンロードされます。
+4. モックアップページを確認する。<br>オプションで設定した入力情報をもとに、モックアップページが表示されます。
 
 ## 💾使用技術
 <table>
@@ -124,7 +122,7 @@ https://restaurant-chain-mockup-extension.aki158-website.blog
 | Minimum postal code: | 場所の郵便番号の範囲を設定できます。<br>郵便番号の下限値を入力できます。 |
 | Maximum postal code: | 場所の郵便番号の範囲を設定できます。<br>郵便番号の上限値を入力できます。 |
 | Download Format: | 生成したいファイル形式を下記のいづれかから選択できます。<br>・HTML<br>・Markdown<br>・JSON<br>・Text |
-| Generate | ボタンをクリックすると、ファイルを生成できます。<br>Download Format:で選択した内容によって生成されるファイルが変わります。<br>・HTML:モックアップページに遷移します。<br>・HTML以外(Markdown/JSON/Text):生成したファイルをユーザーのPCにダウンロードします。 |
+| Generate | ボタンをクリックすると、ファイルを生成できます。<br>Download Format:で選択した内容によって生成されるファイルが変わります。<br>・HTML:モックアップページに遷移します。<br>・HTML以外:生成したファイルをユーザーのPCにダウンロードします。<br>　ファイルのイメージは下記ファイル形式をクリックすると、確認できます。<br>　・[Markdown](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/blob/main/output/users.md)<br>　・[JSON](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/blob/main/output/users.json)<br>　・[Text](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/blob/main/output/users.txt) |
 
 ### モックアップページ
 ![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/8d9cfd99-49ba-47bb-a868-874801f79e9f)
