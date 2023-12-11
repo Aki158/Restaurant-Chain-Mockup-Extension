@@ -109,10 +109,9 @@ https://restaurant-chain-mockup-extension.aki158-website.blog
 </tr>
 </table>
 
-
 ## 👀機能一覧
 ### 入力フォームページ
-![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/70c497ac-fd98-47a3-9990-d82c69417eaa)
+![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/1d4dd555-e32d-45c6-b07d-94e8df05d06c)
 
 | 機能 | 内容 |
 | ------- | ------- |
@@ -125,13 +124,12 @@ https://restaurant-chain-mockup-extension.aki158-website.blog
 | Generate | ボタンをクリックすると、ファイルを生成できます。<br>Download Format:で選択した内容によって生成されるファイルが変わります。<br>・HTML:モックアップページに遷移します。<br>・HTML以外:生成したファイルをユーザーのPCにダウンロードします。<br>　ファイルのイメージは下記ファイル形式をクリックすると、確認できます。<br>　・[Markdown](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/blob/main/output/users.md)<br>　・[JSON](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/blob/main/output/users.json)<br>　・[Text](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/blob/main/output/users.txt) |
 
 ### モックアップページ
-![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/8d9cfd99-49ba-47bb-a868-874801f79e9f)
+![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/fd4215c9-d3f8-4715-83f8-0e5a8ba3c599)
 
 | 機能 | 内容 |
 | ------- | ------- |
 | モックアップページの表示 | [入力フォームページ](#入力フォームページ)のDownload Format:でHTMLを選択してGenerate ボタンをクリックすると、モックアップページに遷移して表示されます。 |
-| アコーディオン | Restaurant Chain Information内のレストラン名をクリックするとアコーディオンの開閉ができます。 |
-
+| アコーディオン | Restaurant Chain Information内のレストラン名をクリックすると、アコーディオンの開閉ができます。 |
 
 ## 📜作成の経緯
 ⭐️後で記載する!!!
@@ -167,18 +165,6 @@ https://restaurant-chain-mockup-extension.aki158-website.blog
 拡張する際に、既存のプロジェクトに対してどこを変更し拡張させるかを考えて作成しました。
 
 https://github.com/Aki158/Restaurant-Chain-Mockup
-
-### アコーディオンをクリック後
-![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/d18c7f19-12ca-43c0-8f84-4352891656ef)
-
-### 入力フォームのDownload Format:Markdownを選択しgenerateをクリック後
-![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/b4ab643a-95e8-4e1f-b632-8cf5482d6db0)
-
-### 入力フォームのDownload Format:JSONを選択しgenerateをクリック後
-![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/c113b715-5d89-4b25-8059-44cf0d4ea0f7)
-
-### 入力フォームのDownload Format:Textを選択しgenerateをクリック後
-![image](https://github.com/Aki158/Restaurant-Chain-Mockup-Extension/assets/119317071/c5238312-d91b-43cd-9f2e-c5a58ac1db4a)
 
 ----
 
