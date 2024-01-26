@@ -11,7 +11,7 @@
 
         <!-- チェーンが持つ従業員の数を選択 -->
         <label for="countEmployee">Number of Employees:</label><br><br>
-        <input type="number" id="countEmployee" name="countEmployee" min="1" max="100" value="5"><br><br>
+        <input type="number" id="countEmployee" name="countEmployee" min="1" max="5" value="3"><br><br>
 
         <!-- 従業員の給与範囲を選択 -->
         <label for="salary">salary:</label><br><br>
@@ -24,7 +24,7 @@
 
         <!-- 場所の数を入力 -->
         <label for="countRestaurantLocation">Number of RestaurantLocations:</label><br><br>
-        <input type="number" id="countRestaurantLocation" name="countRestaurantLocation" min="1" max="10" value="5"><br><br>
+        <input type="number" id="countRestaurantLocation" name="countRestaurantLocation" min="1" max="5" value="3"><br><br>
 
         <!-- 場所の郵便番号の範囲を設定 -->
         <label for="postalCodeMin">Minimum postal code:</label><br><br>

@@ -89,8 +89,6 @@ class RandomGenerator {
     }
 
     public static function restaurantChains(
-                                            int $min, 
-                                            int $max, 
                                             int $countEmployee, 
                                             int $salaryMinNum, 
                                             int $salaryMaxNum, 
@@ -100,7 +98,7 @@ class RandomGenerator {
                                             ): array {
         $faker = Factory::create();
         $arr = [];
-        $l = $faker->numberBetween($min, $max);
+        $l = $faker->numberBetween(1, 5);
 
         for ($i = 0; $i < $l; $i++) {
             $arr[$i] = self::restaurantChain(

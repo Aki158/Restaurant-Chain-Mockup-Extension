@@ -1,23 +1,11 @@
 <?php
-// コードベースのファイルのオートロード
-spl_autoload_extensions(".php"); 
-spl_autoload_register();
-
 // composerの依存関係のオートロード
 require_once "vendor/autoload.php";
 
-// クエリ文字列からパラメータを取得
-$min = $_GET["min"] ?? 2;
-$max = $_GET["max"] ?? 5;
-
-// パラメータが整数であることを確認
-$min = (int)$min;
-$max = (int)$max;
-
 // POSTリクエストからパラメータを取得
-$countEmployee = $_POST["countEmployee"] ?? 5;
+$countEmployee = $_POST["countEmployee"] ?? 3;
 $salary = $_POST["salary"] ?? "1000";
-$countRestaurantLocation = $_POST["countRestaurantLocation"] ?? 5;
+$countRestaurantLocation = $_POST["countRestaurantLocation"] ?? 3;
 $postalCodeMin = $_POST["postalCodeMin"] ?? "000-0000";
 $postalCodeMax = $_POST["postalCodeMax"] ?? "999-9999";
 $format = $_POST["format"] ?? "html";
@@ -84,8 +72,6 @@ if (!in_array($format, $allowedFormats)) {
 }
 
 $restaurantChains = \Helpers\RandomGenerator::restaurantChains(
-                                                            $min, 
-                                                            $max, 
                                                             $countEmployee, 
                                                             $salaryMinNum, 
                                                             $salaryMaxNum, 
